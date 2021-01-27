@@ -1384,6 +1384,7 @@ function requireConfig() {
           $.shareCodesArr.push(shareCodes[item])
         }
       })
+      if ($.shareCodesArr.length > cookiesArr.length) {if (process.env.DREAMFACTORY_FORBID_ACCOUNT) process.env.DREAMFACTORY_FORBID_ACCOUNT.split('&').map((item, index) => Number(item) === 0 ? $.shareCodesArr = [] : $.shareCodesArr.splice(Number(item) - 1 - index, 1))}
     }
     // console.log(`\n种豆得豆助力码::${JSON.stringify($.shareCodesArr)}`);
     console.log(`您提供了${$.shareCodesArr.length}个账号的${$.name}助力码\n`);
